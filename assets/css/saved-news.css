@@ -175,7 +175,7 @@ header {
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  width: 200px;
+  width: 250px;
   display: none;
 }
 .dropdown-menu.active {

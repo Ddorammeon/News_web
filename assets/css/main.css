@@ -168,6 +168,7 @@ header {
   border-radius: 50%;
 }
 .dropdown-menu {
+  z-index: 10;
   position: absolute;
   top: 65px;
   right: -20px;
