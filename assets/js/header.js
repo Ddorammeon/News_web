@@ -75,3 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
     console.warn("Chưa có currentUser trong localStorage");
   }
 });
+
+//Search
+function searchGoogle(event) {
+  event.preventDefault();
+  let query = document.getElementById("search-input").value;
+  if (query.trim() !== "") {
+    let searchUrl = `https://www.google.com/search?q=site:www.yourwebsite.com "${query}"`;
+    window.open(searchUrl, "_blank"); // Mở trong tab mới
+  }
+}

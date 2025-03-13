@@ -61,7 +61,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #86eeec;
+  background: #a2ffff;
 }
 
 .logo {
@@ -645,4 +645,49 @@ header {
   line-height: 21.78px;
   letter-spacing: 0%;
   color: white;
+}
+/*================= login-popup =================*/
+#login-popup {
+  z-index: 9999;
+  position: absolute;
+}
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.login-popup {
+  background: #d1cccc;
+  padding: 80px 120px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 300px;
+}
+.login-title {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 50px;
+  letter-spacing: 0%;
+}
+.login-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+.login-options button {
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid #000;
+  background: white;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 1.6rem;
+  letter-spacing: 0%;
 }

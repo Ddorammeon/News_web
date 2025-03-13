@@ -179,6 +179,7 @@ body {
 .suggestion-container {
   margin: 20px auto;
   padding: 20px;
+  width: 1040px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0.2, 0.2, 0.2, 0.2);

@@ -40,37 +40,43 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Bạn cần đăng nhập để lưu bài viết");
       });
     }
+    localStorage.clear();
   }
 
   // Lấy dữ liệu từ localStorage
   let savedNews = JSON.parse(localStorage.getItem("savedNews")) || [];
   const newsId = getQueryParam("id");
 
-  // Kiểm tra nếu bài viết đã được lưu trước đó
-  const isSaved = savedNews.some((news) => news.id == newsId);
-
-  if (isSaved) {
-    saveButton.textContent = "Đã lưu";
-    saveButton.disabled = true;
-    saveButton.style.color = "#60b004"; // Màu chữ xanh
-    saveButton.style.border = "2px solid #60b004"; // Viền xanh
+  function updateSaveButton(isSaved) {
+    if (isSaved) {
+      saveButton.textContent = "Đã lưu";
+      saveButton.style.color = "#60b004"; // Màu xanh
+      saveButton.style.border = "2px solid #60b004";
+    } else {
+      saveButton.textContent = "Lưu bài viết";
+      saveButton.style.color = ""; // Trở lại mặc định
+      saveButton.style.border = "";
+    }
   }
 
-  // Khi bấm vào nút "Lưu bài viết"
+  // Kiểm tra xem bài viết đã được lưu chưa
+  let isSaved = savedNews.some((news) => news.id == newsId);
+  updateSaveButton(isSaved);
+
+  // Sự kiện khi bấm nút lưu / hủy lưu
   saveButton.addEventListener("click", function () {
-    // Nếu bài viết chưa được lưu, lưu vào localStorage
-    if (!isSaved) {
+    if (isSaved) {
+      savedNews = savedNews.filter((news) => news.id != newsId);
+    } else {
       const newsItem = newsData.find((news) => news.id == newsId);
       if (newsItem) {
         savedNews.push(newsItem);
-        localStorage.setItem("savedNews", JSON.stringify(savedNews));
-
-        saveButton.textContent = "Đã lưu";
-        saveButton.disabled = true;
-        saveButton.style.color = "#60b004";
-        saveButton.style.border = "2px solid #60b004";
       }
     }
+
+    localStorage.setItem("savedNews", JSON.stringify(savedNews));
+    isSaved = !isSaved; // Đảo trạng thái
+    updateSaveButton(isSaved); // Cập nhật giao diện
   });
 });
 

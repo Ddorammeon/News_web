@@ -8,8 +8,8 @@ export const newsData = [
     image: "../assets/img/new1.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
-    categoryId: 3,
+    category: "Đời sống",
+    categoryId: 1,
     content: `Hạt giống số 1 Alexander Zverev đã vượt qua thử thách khó khăn từ tay vợt người Ý Matteo Arnaldi để bắt đầu chiến dịch của mình tại Abierto Mexicano Telcel do HSBC trình bày vào thứ Ba.
     Nhà vô địch năm 2021, người đã đến Acapulco sau hai tuần thi đấu trên sân đất nện Nam Mỹ, đã thích nghi với điều kiện sân cứng ẩm ướt và tìm lại nhịp độ khi trận đấu diễn ra và giành chiến thắng với tỷ số 6-7(2), 6-3, 6-4.
     "Tôi mới rời sân đất nện cách đây vài ngày, không có nhiều thời gian", tay vợt số 2 trong Bảng xếp hạng ATP của PIF cho biết. "Tôi rất vui khi đánh bại một tay vợt chất lượng và lọt vào vòng tiếp theo".
@@ -29,7 +29,7 @@ export const newsData = [
 
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
+    category: "Người nổi tiếng",
     categoryId: 3,
     content: `Một cặp đôi nằm trong Top 20 trên Bảng xếp hạng ATP của PIF đã đến sân tennis có thể là đẹp nhất thế giới vào thứ Bảy để giúp khởi động Giải quần vợt Abierto Mexicano Telcel 2025 do HSBC trình bày .
 
@@ -48,8 +48,8 @@ export const newsData = [
 
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
-    categoryId: 3,
+    category: "Khoảng khắc đáng nhớ",
+    categoryId: 2,
     content: `Lớn lên trong cả khúc côn cầu và quần vợt, Nicolai Budkov Kjaer đã chọn môn thứ hai, và ở tuổi 18, cầu thủ người Na Uy này đã nhanh chóng tạo dựng được dấu ấn của mình.
     Budkov Kjaer vẫn tiếp tục tận hưởng cả hai môn thể thao, coi cảm giác phấn khích tột độ của khúc côn cầu là một điều thú vị mà anh thích thú. Trước khi Budkov Kjaer đến Nitto ATP Finals, nơi anh là một trong ba đối tác đánh bóng cho sự kiện cuối năm danh giá này, anh đã mua cho mình một món quà nghỉ lễ sớm: giày trượt mới. “Tôi thích trượt băng với những người bạn cũ vẫn chơi khúc côn cầu. Tôi vẫn còn tốc độ, vì vậy tôi có thể thách thức họ ở đây và ở đó,” Ngôi sao cho biết vai trò của cha anh tại Liên đoàn quần vợt Na Uy đã có ảnh hưởng đáng kể đến quyết định theo đuổi môn thể thao mà anh đã vươn lên vị trí số 1 thế giới trong năm nay. “Bố tôi đã ở Liên đoàn trong năm năm hay gì đó, vì vậy việc tôi chọn quần vợt là điều tự nhiên hơn,” Budkov Kjaer nói. “Ông ấy ở Liên đoàn khi Casper Ruud lớn lên như một cầu thủ trẻ. Vì vậy, ông ấy biết tất cả các quá trình chuyển đổi và tất cả những điều cần phải làm.”
     Budkov Kjaer đã ghi tên mình vào sách kỷ lục mùa giải này khi anh chiến thắng tại sự kiện đơn nam Wimbledon, trở thành người Na Uy đầu tiên giành danh hiệu đơn nam Slam ở bất kỳ nội dung nào, trẻ em hay chuyên nghiệp. Anh cũng đã nâng cao danh hiệu đôi nam Roland Garros cùng với Joel Schwaerzler.
@@ -65,8 +65,8 @@ export const newsData = [
 
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
-    categoryId: 3,
+    category: "Hồi ức",
+    categoryId: 4,
     content: `Learner Tien đã giành được chiến thắng tuyệt vời nhất trong sự nghiệp của mình theo Bảng xếp hạng PIF ATP vào thứ Tư khi anh gây sốc khi đánh bại tay vợt số 2 thế giới Alexander Zverev với tỷ số 6-3, 6-4 tại Abierto Mexicano Telcel do HSBC trình bày .
 
     Tay vợt 19 tuổi này đã sử dụng lối chơi thuận tay trái khéo léo và sự ổn định như bức tường gạch của mình để dụ hạt giống số 1 vào những lỗi không bình thường, bao gồm một cú đánh trên cao mà Zverev đã bỏ lỡ khi đang ở điểm bẻ giao bóng ở tỷ số 3-4 trong set đầu tiên. Tien vẫn giữ được sự bình tĩnh trong suốt cuộc đụng độ, ghi năm game liên tiếp từ 1-4 trong set thứ hai để ấn định chiến thắng kéo dài một giờ 28 phút.
@@ -84,7 +84,7 @@ export const newsData = [
 
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
+    category: "Người nổi tiếng",
     categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
@@ -97,7 +97,7 @@ export const newsData = [
 
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
+    category: "Người nổi tiếng",
     categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
@@ -110,7 +110,7 @@ export const newsData = [
 
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
+    category: "Người nổi tiếng",
     categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
@@ -123,7 +123,7 @@ export const newsData = [
 
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
+    category: "Người nổi tiếng",
     categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
@@ -136,7 +136,7 @@ export const newsData = [
 
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
+    category: "Người nổi tiếng",
     categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
@@ -149,7 +149,7 @@ export const newsData = [
     image: "../assets/img/new10.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
+    category: "Người nổi tiếng",
     categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
@@ -161,8 +161,8 @@ export const newsData = [
     image: "../assets/img/new11.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
-    categoryId: 3,
+    category: "Hồi ức",
+    categoryId: 4,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -173,8 +173,8 @@ export const newsData = [
     image: "../assets/img/new12.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
-    categoryId: 3,
+    category: "Hồi ức",
+    categoryId: 4,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -186,8 +186,8 @@ export const newsData = [
     image: "../assets/img/new13.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Giải đấu",
-    categoryId: 3,
+    category: "Đời sống",
+    categoryId: 1,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -199,8 +199,8 @@ export const newsData = [
     image: "../assets/img/new14.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Vận động viên",
-    categoryId: 3,
+    category: "Đời sống",
+    categoryId: 1,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -211,7 +211,7 @@ export const newsData = [
     image: "../assets/img/new15.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
+    category: "Người nổi tiếng",
     categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
@@ -223,8 +223,8 @@ export const newsData = [
     image: "../assets/img/new16.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
-    categoryId: 3,
+    category: "Khoảng khắc đáng nhớ",
+    categoryId: 2,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -235,8 +235,8 @@ export const newsData = [
     image: "../assets/img/new17.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
-    categoryId: 3,
+    category: "Khoảng khắc đáng nhớ",
+    categoryId: 2,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -247,7 +247,7 @@ export const newsData = [
     image: "../assets/img/new18.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
-    category: "Thể thao",
+    category: "Người nổi tiếng",
     categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },

@@ -61,7 +61,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #86eeec;
+  background: #a2ffff;
 }
 
 .logo {
@@ -168,7 +168,7 @@ header {
   border-radius: 50%;
 }
 .dropdown-menu {
-  z-index: 10;
+  z-index: 9999;
   position: absolute;
   top: 65px;
   right: -20px;
@@ -212,6 +212,10 @@ header {
   margin-left: auto;
 }
 /*================= login-popup =================*/
+#login-popup {
+  z-index: 9999;
+  position: absolute;
+}
 .login-overlay {
   position: fixed;
   top: 0;
@@ -413,7 +417,6 @@ header {
   font-size: 1.6rem;
   line-height: 19.36px;
   letter-spacing: 0%;
-  color: #333;
 }
 
 .news-item:last-child {
@@ -512,12 +515,12 @@ header {
 
 .daily,
 .breaking {
-  margin-right: 43px;
+  margin-right: 30px;
 }
 
 .daily-img,
 .breaking-img {
-  width: 328px;
+  width: 410px;
   margin-bottom: 13px;
 }
 

@@ -1,15 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
+  // Nếu không có currentUser, xóa toàn bộ localStorage và reload trang
   if (!currentUser) {
-    const saveButton = document.querySelector(".save");
-    if (saveButton) {
-      saveButton.addEventListener("click", function () {
-        alert("Bạn cần đăng nhập để lưu bài viết");
-      });
-    }
+    localStorage.clear();
   }
 });
+// // Danh sách tin tức với nội dung khác nhau
 // Danh sách tin tức với nội dung khác nhau
 const newsData = [
   {
@@ -17,8 +14,11 @@ const newsData = [
     title: "Zverev chiến thắng 3-0 ở trận mở màn tại Acapulco, Rune tiến xa",
     description:
       "Tại Giải quần vợt Abierto Mexicano Telcel 2025 ở Acapulco, Alexander Zverev đã có những màn trình diễn ấn tượng trong trận mở màn.",
-    image: "./assets/img/new1.png",
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    image: "../assets/img/new1.png",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Đời sống",
+    categoryId: 1,
     content: `Hạt giống số 1 Alexander Zverev đã vượt qua thử thách khó khăn từ tay vợt người Ý Matteo Arnaldi để bắt đầu chiến dịch của mình tại Abierto Mexicano Telcel do HSBC trình bày vào thứ Ba.
     Nhà vô địch năm 2021, người đã đến Acapulco sau hai tuần thi đấu trên sân đất nện Nam Mỹ, đã thích nghi với điều kiện sân cứng ẩm ướt và tìm lại nhịp độ khi trận đấu diễn ra và giành chiến thắng với tỷ số 6-7(2), 6-3, 6-4.
     "Tôi mới rời sân đất nện cách đây vài ngày, không có nhiều thời gian", tay vợt số 2 trong Bảng xếp hạng ATP của PIF cho biết. "Tôi rất vui khi đánh bại một tay vợt chất lượng và lọt vào vòng tiếp theo".
@@ -34,9 +34,12 @@ const newsData = [
       "Rune, Tiafoe 'ra khơi và giao bóng' khi sân đấu nổi mang tính biểu tượng của Acapulco trở lại.",
     description:
       "Sự kiện đặc biệt này mang đến trải nghiệm có một không hai cho người chơi lẫn khán giả.",
-    image: "./assets/img/new2.png",
+    image: "../assets/img/new2.png",
 
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Người nổi tiếng",
+    categoryId: 3,
     content: `Một cặp đôi nằm trong Top 20 trên Bảng xếp hạng ATP của PIF đã đến sân tennis có thể là đẹp nhất thế giới vào thứ Bảy để giúp khởi động Giải quần vợt Abierto Mexicano Telcel 2025 do HSBC trình bày .
 
     Holger Rune và Frances Tiafoe đã tham gia một cuộc triển lãm trên sân nổi ở Vịnh St. Lucia của Acapulco khi một trong những hoạt động trước giải đấu mang tính biểu tượng của ATP Tour trở lại sau 10 năm. Đó không phải là trải nghiệm mà Tiafoe sẽ quên nhanh chóng.
@@ -50,9 +53,12 @@ const newsData = [
       "Ngôi sao của Na Uy - Budkov Kjaer là vận động viên “trẻ tuổi nhất”  ",
     description:
       "Dù còn rất trẻ, Budkov Kjaer đã cho thấy tiềm năng vượt trội và tinh thần thi đấu đầy bản lĩnh.",
-    image: "./assets/img/new3.png",
+    image: "../assets/img/new3.png",
 
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Khoảng khắc đáng nhớ",
+    categoryId: 2,
     content: `Lớn lên trong cả khúc côn cầu và quần vợt, Nicolai Budkov Kjaer đã chọn môn thứ hai, và ở tuổi 18, cầu thủ người Na Uy này đã nhanh chóng tạo dựng được dấu ấn của mình.
     Budkov Kjaer vẫn tiếp tục tận hưởng cả hai môn thể thao, coi cảm giác phấn khích tột độ của khúc côn cầu là một điều thú vị mà anh thích thú. Trước khi Budkov Kjaer đến Nitto ATP Finals, nơi anh là một trong ba đối tác đánh bóng cho sự kiện cuối năm danh giá này, anh đã mua cho mình một món quà nghỉ lễ sớm: giày trượt mới. “Tôi thích trượt băng với những người bạn cũ vẫn chơi khúc côn cầu. Tôi vẫn còn tốc độ, vì vậy tôi có thể thách thức họ ở đây và ở đó,” Ngôi sao cho biết vai trò của cha anh tại Liên đoàn quần vợt Na Uy đã có ảnh hưởng đáng kể đến quyết định theo đuổi môn thể thao mà anh đã vươn lên vị trí số 1 thế giới trong năm nay. “Bố tôi đã ở Liên đoàn trong năm năm hay gì đó, vì vậy việc tôi chọn quần vợt là điều tự nhiên hơn,” Budkov Kjaer nói. “Ông ấy ở Liên đoàn khi Casper Ruud lớn lên như một cầu thủ trẻ. Vì vậy, ông ấy biết tất cả các quá trình chuyển đổi và tất cả những điều cần phải làm.”
     Budkov Kjaer đã ghi tên mình vào sách kỷ lục mùa giải này khi anh chiến thắng tại sự kiện đơn nam Wimbledon, trở thành người Na Uy đầu tiên giành danh hiệu đơn nam Slam ở bất kỳ nội dung nào, trẻ em hay chuyên nghiệp. Anh cũng đã nâng cao danh hiệu đôi nam Roland Garros cùng với Joel Schwaerzler.
@@ -64,9 +70,12 @@ const newsData = [
     title: "Tien gây sốc với Zverev ở Acapulco, thác Shelton",
     description:
       "Chiến thắng của Tiến khiến cả làng banh nỉ sững sờ, còn Shelton phải dừng bước đầy tiếc nuối.",
-    image: "./assets/img/new4.png",
+    image: "../assets/img/new4.png",
 
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Hồi ức",
+    categoryId: 4,
     content: `Learner Tien đã giành được chiến thắng tuyệt vời nhất trong sự nghiệp của mình theo Bảng xếp hạng PIF ATP vào thứ Tư khi anh gây sốc khi đánh bại tay vợt số 2 thế giới Alexander Zverev với tỷ số 6-3, 6-4 tại Abierto Mexicano Telcel do HSBC trình bày .
 
     Tay vợt 19 tuổi này đã sử dụng lối chơi thuận tay trái khéo léo và sự ổn định như bức tường gạch của mình để dụ hạt giống số 1 vào những lỗi không bình thường, bao gồm một cú đánh trên cao mà Zverev đã bỏ lỡ khi đang ở điểm bẻ giao bóng ở tỷ số 3-4 trong set đầu tiên. Tien vẫn giữ được sự bình tĩnh trong suốt cuộc đụng độ, ghi năm game liên tiếp từ 1-4 trong set thứ hai để ấn định chiến thắng kéo dài một giờ 28 phút.
@@ -80,9 +89,12 @@ const newsData = [
     title: "Mục tiêu tiếp theo của được hé lộ",
     description:
       "Blockx-buster: Thiếu niên “thiên tài” người Bỉ nhắm đến Chung kết ATP tiếp theo",
-    image: "./assets/img/new5.png",
+    image: "../assets/img/new5.png",
 
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Người nổi tiếng",
+    categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -90,9 +102,12 @@ const newsData = [
     title: "Vào ngày này: Djokovic vượt qua Graf ",
     description:
       "Tuần thứ 378 của Serbia ở vị trí số 1 đã phá vỡ dấu ấn của Graf",
-    image: "./assets/img/new6.png",
+    image: "../assets/img/new6.png",
 
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Người nổi tiếng",
+    categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -100,9 +115,12 @@ const newsData = [
     title: "Tiền thưởng quần vợt Acapulco 2025",
     description:
       "Giải đấu năm nay không chỉ hấp dẫn bởi những màn so tài đỉnh cao mà còn bởi mức tiền thưởng đầy hấp dẫn.",
-    image: "./assets/img/new7.png",
+    image: "../assets/img/new7.png",
 
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Người nổi tiếng",
+    categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -110,9 +128,12 @@ const newsData = [
     title: "Trận đấu ở Santiago bị đình chỉ do lệnh giới nghiêm",
     description:
       "Bầu không khí căng thẳng bao trùm khi lệnh giới nghiêm buộc trận đấu phải tạm dừng, khiến người hâm mộ không khỏi tiếc nuối.",
-    image: "./assets/img/new8.png",
+    image: "../assets/img/new8.png",
 
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Người nổi tiếng",
+    categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -120,9 +141,12 @@ const newsData = [
     title: "Bí mật về trò chơi của Zverev ẩn giấu trong tầm mắt",
     description:
       "Những chi tiết tinh tế trong lối đánh của Zverev có thể là chìa khóa cho thành công, nhưng không phải ai cũng nhận ra.",
-    image: "./assets/img/new9.png",
+    image: "../assets/img/new9.png",
 
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Người nổi tiếng",
+    categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -131,8 +155,11 @@ const newsData = [
       "Ugo Carabelli vươn lên đỉnh cao sự nghiệp sau giải Rio, Người dẫn đầu tuần",
     description:
       "Ugo Carabelli chạm mốc mới trong sự nghiệp sau màn trình diễn ấn tượng tại Rio, trở thành tâm điểm của tuần.",
-    image: "./assets/img/new10.png",
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    image: "../assets/img/new10.png",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Người nổi tiếng",
+    categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -140,8 +167,11 @@ const newsData = [
     title: "Garin tuyên bố giành chiến thắng mở màn ở Santiago",
     description:
       "Garin khởi đầu đầy mạnh mẽ tại Santiago, tự tin tuyên bố chiến thắng trong trận ra quân.",
-    image: "./assets/img/new11.png",
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    image: "../assets/img/new11.png",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Hồi ức",
+    categoryId: 4,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -149,8 +179,11 @@ const newsData = [
     title: "Mỹ nhân từng bỏ tennis vì “vòng 1 quá khổ”",
     description:
       "Người đẹp quần vợt từng từ bỏ sự nghiệp vì “vòng 1 quá khổ” nay gây chú ý trở lại.",
-    image: "./assets/img/new12.png",
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    image: "../assets/img/new12.png",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Hồi ức",
+    categoryId: 4,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -159,8 +192,11 @@ const newsData = [
       "Net Zero: Comesana hạ cánh khẩn cấp để giành được chiến thắng thần kỳ ở Rio",
     description:
       "Comesana vượt qua nghịch cảnh, tạo nên chiến thắng kỳ diệu tại Rio.",
-    image: "./assets/img/new13.png",
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    image: "../assets/img/new13.png",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Đời sống",
+    categoryId: 1,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -169,8 +205,11 @@ const newsData = [
       "Cilic làm choáng váng De Minaur ở Dubai, Halys đánh bại cựu vô địch Rublev",
     description:
       "Cilic gây sốc khi quật ngã De Minaur tại Dubai, trong khi Halys hạ gục cựu vô địch Rublev đầy ấn tượng.",
-    image: "./assets/img/new14.png",
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    image: "../assets/img/new14.png",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Đời sống",
+    categoryId: 1,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -178,8 +217,11 @@ const newsData = [
     title: "Tien vượt qua Norrie ở Acapulco trong trận ra mắt chính",
     description:
       "Tiến ghi dấu ấn mạnh mẽ ngay lần đầu tiên góp mặt, đánh bại Norrie đầy ấn tượng tại Acapulco.",
-    image: "./assets/img/new15.png",
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    image: "../assets/img/new15.png",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Người nổi tiếng",
+    categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -187,8 +229,11 @@ const newsData = [
     title: "Denis Shapovalov kiểm tra trí nhớ của mình",
     description:
       "Denis Shapovalov thử thách trí nhớ với những khoảnh khắc đáng nhớ trong sự nghiệp.",
-    image: "./assets/img/new16.png",
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    image: "../assets/img/new16.png",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Khoảng khắc đáng nhớ",
+    categoryId: 2,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -196,8 +241,11 @@ const newsData = [
     title: "Nicolai Budkov Kjaer ghi tên mình vào lịch sử",
     description:
       "Nicolai Budkov Kjaer khắc dấu ấn vàng son, trở thành một phần của lịch sử quần vợt.",
-    image: "./assets/img/new17.png",
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    image: "../assets/img/new17.png",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Khoảng khắc đáng nhớ",
+    categoryId: 2,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
   {
@@ -205,12 +253,14 @@ const newsData = [
     title: "Lịch thi đấu quần vợt Rio là gì?",
     description:
       "Rio Open 2025 diễn ra từ ngày 17 đến 23 tháng 2 với những trận đấu hấp dẫn trên sân đất nện.",
-    image: "./assets/img/new18.png",
-    date: "Ngày 27 tháng 2 năm 2025 viết bởi Grant Thompson",
+    image: "../assets/img/new18.png",
+    date: "27/2/2025",
+    status: "Đang hoạt động",
+    category: "Người nổi tiếng",
+    categoryId: 3,
     content: `Đây là nội dung chi tiết của bài viết 1 về Zverev...`,
   },
 ];
-
 // Danh sách tin tức (20 bài)
 
 let currentPage = 1;
@@ -221,12 +271,21 @@ function renderNews() {
   const newsList = document.getElementById("news-list");
   newsList.innerHTML = "";
 
+  // Lấy categoryId từ URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryId = urlParams.get("category");
+
+  // Lọc tin tức theo categoryId nếu có
+  let filteredNews = categoryId
+    ? newsData.filter((news) => news.categoryId == categoryId)
+    : newsData;
+
   // Sắp xếp dữ liệu từ lớn đến nhỏ
-  newsData.sort((a, b) => b.id - a.id);
+  filteredNews.sort((a, b) => b.id - a.id);
 
   const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
-  const pageItems = newsData.slice(start, end);
+  const pageItems = filteredNews.slice(start, end);
 
   pageItems.forEach((news) => {
     const newsItem = document.createElement("div");
@@ -257,12 +316,12 @@ function renderNews() {
   document.getElementById(
     "page-info"
   ).textContent = `Trang ${currentPage} / ${Math.ceil(
-    newsData.length / itemsPerPage
+    filteredNews.length / itemsPerPage
   )}`;
 
   document.getElementById("prevBtn").disabled = currentPage === 1;
   document.getElementById("nextBtn").disabled =
-    currentPage === Math.ceil(newsData.length / itemsPerPage);
+    currentPage === Math.ceil(filteredNews.length / itemsPerPage);
 }
 
 function changePage(step) {
@@ -274,33 +333,33 @@ function viewDetail(id) {
   window.location.href = `news-detail.html?id=${id}`;
 }
 
+// Hàm lưu / xóa bài viết khỏi localStorage
 function saveNews(newsId, button) {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   if (!currentUser) {
-    const saveButton = document.querySelector(".save");
-    if (saveButton) {
-      saveButton.addEventListener("click", function () {
-        alert("Bạn cần đăng nhập để lưu bài viết");
-      });
-    }
+    alert("Bạn cần đăng nhập để lưu bài viết");
+    return;
   }
+
   let savedNews = JSON.parse(localStorage.getItem("savedNews")) || [];
-
-  // Lấy tin từ newsData theo ID
-  const news = newsData.find((item) => item.id === newsId);
-  if (!news) return;
-
-  // Kiểm tra nếu tin đã tồn tại
   const index = savedNews.findIndex((item) => item.id === newsId);
-  if (index === -1) {
-    savedNews.push(news);
-    localStorage.setItem("savedNews", JSON.stringify(savedNews));
-    location.reload(); // Reload trang để cập nhật
 
-    // Đổi giao diện
-    button.querySelector("span").textContent = "Đã lưu";
-    button.querySelector("span").style.color = "red";
+  if (index === -1) {
+    // Lưu bài viết
+    const news = newsData.find((item) => item.id === newsId);
+    if (news) {
+      savedNews.push(news);
+      localStorage.setItem("savedNews", JSON.stringify(savedNews));
+      button.textContent = "Đã lưu";
+      button.classList.add("saved");
+    }
+  } else {
+    // Xóa bài viết đã lưu
+    savedNews.splice(index, 1);
+    localStorage.setItem("savedNews", JSON.stringify(savedNews));
+    button.textContent = "Lưu bài";
+    button.classList.remove("saved");
   }
 }
 
