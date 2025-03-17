@@ -60,6 +60,10 @@ function logout() {
 document.addEventListener("DOMContentLoaded", function () {
   let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
+  if (currentUser.avatar.startsWith("/")) {
+    currentUser.avatar = "." + currentUser.avatar;
+  }
+
   if (currentUser) {
     // Cập nhật tên và avatar lên menu nếu có
     if (currentUser.name) {

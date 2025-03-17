@@ -87,6 +87,10 @@ function saveData() {
   // 🔥 Kiểm tra nếu currentUser chưa có, lấy dữ liệu cũ từ localStorage
   let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
+  if (currentUser.avatar.startsWith("/")) {
+    currentUser.avatar = "." + currentUser.avatar;
+  }
+
   if (!currentUser) {
     alert("Lỗi: Không tìm thấy tài khoản! Vui lòng đăng nhập lại.");
     return;
@@ -132,6 +136,10 @@ window.onload = function () {
 
   // 🔥 Lấy dữ liệu từ currentUser trong localStorage
   let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  if (currentUser.avatar.startsWith("/")) {
+    currentUser.avatar = "." + currentUser.avatar;
+  }
 
   if (!currentUser) {
     alert("Lỗi: Không tìm thấy tài khoản! Vui lòng đăng nhập lại.");
