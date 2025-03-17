@@ -14,7 +14,7 @@ const newsData = [
     title: "Zverev chiến thắng 3-0 ở trận mở màn tại Acapulco, Rune tiến xa",
     description:
       "Tại Giải quần vợt Abierto Mexicano Telcel 2025 ở Acapulco, Alexander Zverev đã có những màn trình diễn ấn tượng trong trận mở màn.",
-    image: "../assets/img/new1.png",
+    image: "./assets/img/new1.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
     category: "Đời sống",
@@ -34,7 +34,7 @@ const newsData = [
       "Rune, Tiafoe 'ra khơi và giao bóng' khi sân đấu nổi mang tính biểu tượng của Acapulco trở lại.",
     description:
       "Sự kiện đặc biệt này mang đến trải nghiệm có một không hai cho người chơi lẫn khán giả.",
-    image: "../assets/img/new2.png",
+    image: "./assets/img/new2.png",
 
     date: "27/2/2025",
     status: "Đang hoạt động",
@@ -53,7 +53,7 @@ const newsData = [
       "Ngôi sao của Na Uy - Budkov Kjaer là vận động viên “trẻ tuổi nhất”  ",
     description:
       "Dù còn rất trẻ, Budkov Kjaer đã cho thấy tiềm năng vượt trội và tinh thần thi đấu đầy bản lĩnh.",
-    image: "../assets/img/new3.png",
+    image: "./assets/img/new3.png",
 
     date: "27/2/2025",
     status: "Đang hoạt động",
@@ -70,7 +70,7 @@ const newsData = [
     title: "Tien gây sốc với Zverev ở Acapulco, thác Shelton",
     description:
       "Chiến thắng của Tiến khiến cả làng banh nỉ sững sờ, còn Shelton phải dừng bước đầy tiếc nuối.",
-    image: "../assets/img/new4.png",
+    image: "./assets/img/new4.png",
 
     date: "27/2/2025",
     status: "Đang hoạt động",
@@ -89,7 +89,7 @@ const newsData = [
     title: "Mục tiêu tiếp theo của được hé lộ",
     description:
       "Blockx-buster: Thiếu niên “thiên tài” người Bỉ nhắm đến Chung kết ATP tiếp theo",
-    image: "../assets/img/new5.png",
+    image: "./assets/img/new5.png",
 
     date: "27/2/2025",
     status: "Đang hoạt động",
@@ -102,7 +102,7 @@ const newsData = [
     title: "Vào ngày này: Djokovic vượt qua Graf ",
     description:
       "Tuần thứ 378 của Serbia ở vị trí số 1 đã phá vỡ dấu ấn của Graf",
-    image: "../assets/img/new6.png",
+    image: "./assets/img/new6.png",
 
     date: "27/2/2025",
     status: "Đang hoạt động",
@@ -115,7 +115,7 @@ const newsData = [
     title: "Tiền thưởng quần vợt Acapulco 2025",
     description:
       "Giải đấu năm nay không chỉ hấp dẫn bởi những màn so tài đỉnh cao mà còn bởi mức tiền thưởng đầy hấp dẫn.",
-    image: "../assets/img/new7.png",
+    image: "./assets/img/new7.png",
 
     date: "27/2/2025",
     status: "Đang hoạt động",
@@ -128,7 +128,7 @@ const newsData = [
     title: "Trận đấu ở Santiago bị đình chỉ do lệnh giới nghiêm",
     description:
       "Bầu không khí căng thẳng bao trùm khi lệnh giới nghiêm buộc trận đấu phải tạm dừng, khiến người hâm mộ không khỏi tiếc nuối.",
-    image: "../assets/img/new8.png",
+    image: "./assets/img/new8.png",
 
     date: "27/2/2025",
     status: "Đang hoạt động",
@@ -141,7 +141,7 @@ const newsData = [
     title: "Bí mật về trò chơi của Zverev ẩn giấu trong tầm mắt",
     description:
       "Những chi tiết tinh tế trong lối đánh của Zverev có thể là chìa khóa cho thành công, nhưng không phải ai cũng nhận ra.",
-    image: "../assets/img/new9.png",
+    image: "./assets/img/new9.png",
 
     date: "27/2/2025",
     status: "Đang hoạt động",
@@ -155,7 +155,7 @@ const newsData = [
       "Ugo Carabelli vươn lên đỉnh cao sự nghiệp sau giải Rio, Người dẫn đầu tuần",
     description:
       "Ugo Carabelli chạm mốc mới trong sự nghiệp sau màn trình diễn ấn tượng tại Rio, trở thành tâm điểm của tuần.",
-    image: "../assets/img/new10.png",
+    image: "./assets/img/new10.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
     category: "Người nổi tiếng",
@@ -167,7 +167,7 @@ const newsData = [
     title: "Garin tuyên bố giành chiến thắng mở màn ở Santiago",
     description:
       "Garin khởi đầu đầy mạnh mẽ tại Santiago, tự tin tuyên bố chiến thắng trong trận ra quân.",
-    image: "../assets/img/new11.png",
+    image: "./assets/img/new11.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
     category: "Hồi ức",
@@ -179,7 +179,7 @@ const newsData = [
     title: "Mỹ nhân từng bỏ tennis vì “vòng 1 quá khổ”",
     description:
       "Người đẹp quần vợt từng từ bỏ sự nghiệp vì “vòng 1 quá khổ” nay gây chú ý trở lại.",
-    image: "../assets/img/new12.png",
+    image: "./assets/img/new12.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
     category: "Hồi ức",
@@ -192,7 +192,7 @@ const newsData = [
       "Net Zero: Comesana hạ cánh khẩn cấp để giành được chiến thắng thần kỳ ở Rio",
     description:
       "Comesana vượt qua nghịch cảnh, tạo nên chiến thắng kỳ diệu tại Rio.",
-    image: "../assets/img/new13.png",
+    image: "./assets/img/new13.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
     category: "Đời sống",
@@ -205,7 +205,7 @@ const newsData = [
       "Cilic làm choáng váng De Minaur ở Dubai, Halys đánh bại cựu vô địch Rublev",
     description:
       "Cilic gây sốc khi quật ngã De Minaur tại Dubai, trong khi Halys hạ gục cựu vô địch Rublev đầy ấn tượng.",
-    image: "../assets/img/new14.png",
+    image: "./assets/img/new14.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
     category: "Đời sống",
@@ -217,7 +217,7 @@ const newsData = [
     title: "Tien vượt qua Norrie ở Acapulco trong trận ra mắt chính",
     description:
       "Tiến ghi dấu ấn mạnh mẽ ngay lần đầu tiên góp mặt, đánh bại Norrie đầy ấn tượng tại Acapulco.",
-    image: "../assets/img/new15.png",
+    image: "./assets/img/new15.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
     category: "Người nổi tiếng",
@@ -229,7 +229,7 @@ const newsData = [
     title: "Denis Shapovalov kiểm tra trí nhớ của mình",
     description:
       "Denis Shapovalov thử thách trí nhớ với những khoảnh khắc đáng nhớ trong sự nghiệp.",
-    image: "../assets/img/new16.png",
+    image: "./assets/img/new16.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
     category: "Khoảng khắc đáng nhớ",
@@ -241,7 +241,7 @@ const newsData = [
     title: "Nicolai Budkov Kjaer ghi tên mình vào lịch sử",
     description:
       "Nicolai Budkov Kjaer khắc dấu ấn vàng son, trở thành một phần của lịch sử quần vợt.",
-    image: "../assets/img/new17.png",
+    image: "./assets/img/new17.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
     category: "Khoảng khắc đáng nhớ",
@@ -253,7 +253,7 @@ const newsData = [
     title: "Lịch thi đấu quần vợt Rio là gì?",
     description:
       "Rio Open 2025 diễn ra từ ngày 17 đến 23 tháng 2 với những trận đấu hấp dẫn trên sân đất nện.",
-    image: "../assets/img/new18.png",
+    image: "./assets/img/new18.png",
     date: "27/2/2025",
     status: "Đang hoạt động",
     category: "Người nổi tiếng",
