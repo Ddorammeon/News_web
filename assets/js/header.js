@@ -17,16 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function loadHeaderLogined() {
+  let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  // Kiểm tra nếu đường dẫn là tuyệt đối, sửa thành tương đối
+  if (currentUser.avatar.startsWith("/")) {
+    currentUser.avatar = "." + currentUser.avatar;
+  }
+
   document.getElementById("header").innerHTML = `
     <div class="avatar-container" onclick="toggleMenu()">
-      <img src="${
-        JSON.parse(localStorage.getItem("currentUser")).avatar
-      }" alt="Avatar" class="avatar" />
+      <img src="${currentUser.avatar}" alt="Avatar" class="avatar" />
       <div class="dropdown-menu" id="dropdownMenu">
         <div class="menu-title">
-          <strong id="fullNameMenu">${
-            JSON.parse(localStorage.getItem("currentUser")).name
-          }</strong>
+          <strong id="fullNameMenu">${currentUser.name}</strong>
         </div>
         <div class="menu-item">
           <a href="./account-detail.html">👤 Thông tin tài khoản</a>
