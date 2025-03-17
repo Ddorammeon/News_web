@@ -257,9 +257,8 @@
     <script src="./assets/js/headerLogined.js"></script>
     <script src="./assets/js/headerNotLogin.js"></script>
     <script src="./assets/js/header.js"></script>
-    <script type="module">
-      import { newsData } from "./data/newsData.js";
-
+    <script src="./data/newsData.js"></script>
+    <script>
       function renderNewsSection() {
         const newsList = document.querySelector(".blog-part");
         if (!newsData || newsData.length === 0) {
