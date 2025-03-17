@@ -46,6 +46,9 @@
             <div class="menu-item">
               <a href="./profile.html">HỒ SƠ CÁ NHÂN</a>
             </div>
+            <div class="menu-item">
+              <a id="logout-btn">ĐĂNG XUẤT</a>
+            </div>
           </div>
         </div>
         <div class="right-admin">
@@ -260,7 +263,22 @@
         }
       }
 
-      // Khi trang tải, kiểm tra & khởi tạo dữ liệu nếu cần, rồi cập nhật UI
+      // Hàm xử lý đăng xuất
+      function logout() {
+        localStorage.clear();
+        window.location.href = "../login/login_admin.html";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const logoutButton = document.getElementById("logout-btn");
+        if (logoutButton) {
+          logoutButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            logout();
+          });
+        }
+      });
+
       document.addEventListener("DOMContentLoaded", () => {
         initializeUserData(); // Đảm bảo dữ liệu đã có trong localStorage
         loadUserData(); // Hiển thị dữ liệu lên UI

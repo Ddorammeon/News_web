@@ -46,6 +46,9 @@
             <div class="menu-item">
               <a href="./profile.html">HỒ SƠ CÁ NHÂN</a>
             </div>
+            <div class="menu-item">
+              <a id="logout-btn">ĐĂNG XUẤT</a>
+            </div>
           </div>
         </div>
         <div class="right-admin">
@@ -223,6 +226,7 @@
 
         let tournamentImageBase64 = tournament.image;
         let backgroundImageBase64 = tournament.background;
+        checkForm();
 
         function checkForm() {
           if (
@@ -235,7 +239,9 @@
             total.value.trim() &&
             more.value.trim() &&
             previewImage.src &&
-            previewBackground.src
+            previewBackground.src &&
+            previewImage.src !== window.location.href &&
+            previewBackground.src !== window.location.href
           ) {
             saveBtn.disabled = false;
           } else {
@@ -267,6 +273,7 @@
             reader.onload = (e) => {
               previewElement.src = e.target.result;
               if (callback) callback(e.target.result);
+              checkForm();
             };
             reader.readAsDataURL(file);
           }
@@ -360,10 +367,25 @@
         }
       }
 
-      // Khi trang tải, kiểm tra & khởi tạo dữ liệu nếu cần, rồi cập nhật UI
+      // Hàm xử lý đăng xuất
+      function logout() {
+        localStorage.clear();
+        window.location.href = "../login/login_admin.html";
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
-        initializeUserData(); // Đảm bảo dữ liệu đã có trong localStorage
-        loadUserData(); // Hiển thị dữ liệu lên UI
+        const logoutButton = document.getElementById("logout-btn");
+        if (logoutButton) {
+          logoutButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            logout();
+          });
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initializeUserData();
+        loadUserData();
       });
     </script>
   </body>

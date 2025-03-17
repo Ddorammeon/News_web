@@ -46,6 +46,9 @@
             <div class="menu-item">
               <a href="./profile.html">HỒ SƠ CÁ NHÂN</a>
             </div>
+            <div class="menu-item">
+              <a id="logout-btn">ĐĂNG XUẤT</a>
+            </div>
           </div>
         </div>
         <div class="right-admin">
@@ -159,9 +162,10 @@
         newsTitle.value = newsItem.title;
         newsDescription.value = newsItem.description;
         newsContent.value = newsItem.content;
-        previewImage.src = newsItem.image;
+        previewImage.src = newsItem.image || "";
         categorySelect.value = newsItem.categoryId;
         statusToggle.checked = newsItem.status === "Đang hoạt động";
+        checkForm();
 
         imageInput.addEventListener("change", function (event) {
           const file = event.target.files[0];
@@ -169,6 +173,7 @@
             const reader = new FileReader();
             reader.onload = function (e) {
               previewImage.src = e.target.result;
+              checkForm();
             };
             reader.readAsDataURL(file);
           }
@@ -180,7 +185,8 @@
             newsDescription.value.trim() &&
             newsContent.value.trim() &&
             categorySelect.value &&
-            previewImage.src
+            previewImage.src &&
+            previewImage.src !== window.location.href
           ) {
             saveBtn.disabled = false;
           } else {
@@ -273,10 +279,25 @@
         }
       }
 
-      // Khi trang tải, kiểm tra & khởi tạo dữ liệu nếu cần, rồi cập nhật UI
+      // Hàm xử lý đăng xuất
+      function logout() {
+        localStorage.clear();
+        window.location.href = "../login/login_admin.html";
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
-        initializeUserData(); // Đảm bảo dữ liệu đã có trong localStorage
-        loadUserData(); // Hiển thị dữ liệu lên UI
+        const logoutButton = document.getElementById("logout-btn");
+        if (logoutButton) {
+          logoutButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            logout();
+          });
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initializeUserData();
+        loadUserData();
       });
     </script>
   </body>
