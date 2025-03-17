@@ -63,6 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function logout() {
   localStorage.removeItem("currentUser");
-  window.location.href = "/index.html";
+  window.location.href = "./index.html";
 }
 document.getElementById("logoutBtn")?.addEventListener("click", logout);

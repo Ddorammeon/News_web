@@ -32,7 +32,7 @@ function loadHeaderLogined() {
           <a href="./account-detail.html">👤 Thông tin tài khoản</a>
         </div>
         <div class="menu-item">
-          <a href="/saved-news.html">🔖 Tin bài đã lưu</a>
+          <a href="./saved-news.html">🔖 Tin bài đã lưu</a>
         </div>
         <div class="menu-item">
           <a id="logoutBtn">↩️ Thoát tài khoản</a>
