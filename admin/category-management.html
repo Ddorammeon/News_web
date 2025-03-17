@@ -253,6 +253,9 @@
             // Cập nhật Avatar
             const avatarElement = document.querySelector("#avatar-img");
             if (avatarElement) {
+              if (user.avatar.startsWith("/")) {
+                user.avatar = ".." + user.avatar;
+              }
               avatarElement.src = user.avatar;
             }
           }
