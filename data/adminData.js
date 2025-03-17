@@ -4,7 +4,7 @@ export const userAdmin = [
     name: "Admin",
     username: "admin",
     email: "admin@example.com",
-    avatar: "../assets/img/account.svg",
+    avatar: "/assets/img/account.svg",
     password: "admin123",
   },
 ];
