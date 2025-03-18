@@ -65,6 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Sự kiện khi bấm nút lưu / hủy lưu
   saveButton.addEventListener("click", function () {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (!currentUser) {
+      alert("Bạn cần đăng nhập để lưu bài viết");
+      return;
+    }
     if (isSaved) {
       savedNews = savedNews.filter((news) => news.id != newsId);
     } else {
